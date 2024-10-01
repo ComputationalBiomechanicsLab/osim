@@ -1,0 +1,12 @@
+[submodule "third_party/simbody"]
+	path = third_party/simbody
+	url = https://github.com/ComputationalBiomechanicsLab/simbody
+[submodule "third_party/spdlog"]
+	path = third_party/spdlog
+	url = https://github.com/ComputationalBiomechanicsLab/spdlog
+[submodule "third_party/opensim-core"]
+	path = third_party/opensim-core
+	url = https://github.com/ComputationalBiomechanicsLab/opensim-core
+[submodule "third_party/OpenBLAS"]
+	path = third_party/OpenBLAS
+	url = https://github.com/ComputationalBiomechanicsLab/OpenBLAS
