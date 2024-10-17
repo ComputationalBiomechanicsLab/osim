@@ -696,7 +696,7 @@ if(${OSIM_NATIVE_INSTALL})
 
     # install `osimConfig.cmake` to `lib/cmake/osim`
     configure_package_config_file(
-        "${CMAKE_CURRENT_SOURCE_DIR}/osimConfig.cmake.in"
+        "${CMAKE_CURRENT_SOURCE_DIR}/cmake/osimConfig.cmake.in"
         "${CMAKE_CURRENT_BINARY_DIR}/osimConfig.cmake"
         INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/osim
     )
