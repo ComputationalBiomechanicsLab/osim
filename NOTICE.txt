@@ -1,0 +1,38 @@
+osim
+Copyright 2024 Adam Kewley
+License: Apache License Version 2.0
+
+This product includes the following software, developed by third parties:
+
+
+OpenBLAS
+--------
+
+- https://github.com/OpenMathLib/OpenBLAS
+- Licensed under BSD 3-Clause "New" or "Revised" License
+- Copyright (c) 2011-2014, The OpenBLAS Project
+
+
+opensim-core
+------------
+
+- https://github.com/opensim-org/opensim-core
+- Licensed under the Apache 2.0 license
+- Mixed copyright holders. Largest appearsto be: Copyright (c) 2005-2024 Stanford University
+
+
+simbody
+-------
+
+- https://github.com/simbody/simbody
+- Licensed under the Apache 2.0 license
+- Mixed copyright holders. Most are something like: "Copyright (c) 2007 Stanford University and
+  the authors", with Michael Sherman as the primary author (by far)
+
+
+spdlog
+------
+
+- https://github.com/gabime/spdlog.git
+- Licensed under the MIT license
+- Copyright (c) 2016 Gabi Melman
