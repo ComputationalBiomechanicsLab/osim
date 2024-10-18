@@ -5,6 +5,7 @@ project(osim-dependencies)
 set(OSCDEPS_BUILD_ALWAYS OFF CACHE BOOL "set BUILD_ALWAYS on all dependency targets, useful when editing dependencies")
 set(OSIMDEPS_GET_OPENBLAS ON CACHE BOOL "enable getting + building OpenBLAS from source")
 set(OSIMDEPS_GET_SPDLOG ON CACHE BOOL "enable getting + building spdlog from source")
+set(OSIMDEPS_GET_CATCH2 ON CACHE BOOL "enable getting + building catch2 from source")
 
 include(ExternalProject)  # ExternalProject_Add
 include(GNUInstallDirs)  # CMAKE_INSTALL_LIBDIR
@@ -67,5 +68,14 @@ if(${OSIMDEPS_GET_SPDLOG})
             -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
             -DSPDLOG_BUILD_SHARED:BOOL=OFF
             -DCMAKE_CXX_FLAGS:STRING=${SPDLOG_CXX_FLAGS}
+    )
+endif()
+
+if(${OSIMDEPS_GET_CATCH})
+    ExternalProject_Add(catch2
+        SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/catch2
+        BUILD_ALWAYS ${OSCDEPS_BUILD_ALWAYS}
+        CMAKE_CACHE_ARGS
+            ${OSCDEPS_DEPENDENCY_CMAKE_ARGS}
     )
 endif()
