@@ -23,7 +23,7 @@
  * limitations under the License.                                             *
  * -------------------------------------------------------------------------- */
 
-#include <OpenSimThirdPartyPlugins/osimPluginDLL.h>
+#include <osim/ThirdPartyPlugins/osimPluginDLL.h>
 
 #include <OpenSim/Simulation/Model/ContactGeometry.h>
 #include <OpenSim/Simulation/Model/PhysicalOffsetFrame.h>

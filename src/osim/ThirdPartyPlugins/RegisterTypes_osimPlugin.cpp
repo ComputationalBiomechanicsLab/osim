@@ -22,8 +22,8 @@
 
 #include "RegisterTypes_osimPlugin.h"
 
-#include <OpenSimThirdPartyPlugins/opensim-jam-org/jam-plugin/Smith2018ArticularContactForce.h>
-#include <OpenSimThirdPartyPlugins/opensim-jam-org/jam-plugin/Smith2018ContactMesh.h>
+#include <osim/ThirdPartyPlugins/opensim-jam-org/jam-plugin/Smith2018ArticularContactForce.h>
+#include <osim/ThirdPartyPlugins/opensim-jam-org/jam-plugin/Smith2018ContactMesh.h>
 
 #include <OpenSim/Common/Object.h>
 

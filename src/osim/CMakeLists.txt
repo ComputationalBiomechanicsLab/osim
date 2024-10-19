@@ -566,6 +566,7 @@ add_library(osim STATIC
     ThirdPartyPlugins/RegisterTypes_osimPlugin.h
 
     # additional code (in the `osim::` namespace)
+    osim.cpp
 )
 target_include_directories(osim
 PUBLIC
@@ -590,6 +591,10 @@ PUBLIC
     # OpenSim includes
     $<BUILD_INTERFACE:${OSIM_OPENSIM_BASEDIR}>
     $<BUILD_INTERFACE:${OSIM_OPENSIM_BASEDIR}/Vendors/lepton/include>
+    $<INSTALL_INTERFACE:include>
+
+    # osim includes (uniformly uses `osim/DIR/HEADER` form)
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>
     $<INSTALL_INTERFACE:include>
 )
 target_compile_definitions(osim
