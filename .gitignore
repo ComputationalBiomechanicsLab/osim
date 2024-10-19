@@ -1,0 +1,28 @@
+# mac OS file
+.DS_Store
+
+# opensim logs
+**/opensim.log
+
+# C++ objects and libs
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# QtCreator
+*.autosave
+
+# Visual Studio
+.vs/
+CMakeSettings.json
+out/
+
+# Visual Studio Code user directory
+.vscode/
