@@ -1,1 +1,1 @@
-# todo
+# add_subdirectory(TestThirdPartyPlugins)

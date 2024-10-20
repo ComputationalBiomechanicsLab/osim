@@ -567,6 +567,7 @@ add_library(osim STATIC
 
     # additional code (in the `osim::` namespace)
     osim.cpp
+    osim.h
 )
 target_include_directories(osim
 PUBLIC
@@ -650,6 +651,9 @@ PUBLIC
     LAPACK::LAPACK              # used by simbody
     spdlog::spdlog_header_only  # used by OpenSim
 )
+
+# install osim headers to `include/osim`
+install(FILES osim.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/osim/)
 
 # install `osimTargets.cmake` to `lib/cmake/osim`
 install(TARGETS osim EXPORT osimTargets)
