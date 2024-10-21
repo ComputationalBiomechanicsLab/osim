@@ -14,4 +14,4 @@ jobs:
     - name: run scripts/build_windows.bat
       run: |
         cd $env:GITHUB_WORKSPACE\osim
-        call scripts/build_windows.bat || exit /b
+        scripts\\build_windows.bat || exit /b
