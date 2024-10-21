@@ -642,7 +642,7 @@ PUBLIC
     # OpenSim's `spdlog` transitively uses a deprecated `stdext::checked_array_iterator`
     $<$<CXX_COMPILER_ID:MSVC>:_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING>
 )
-target_compile_features(osim PRIVATE cxx_std_14)
+target_compile_features(osim PUBLIC cxx_std_17)
 
 target_link_libraries(osim
 PUBLIC

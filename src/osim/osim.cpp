@@ -60,7 +60,7 @@ namespace
         {
             std::stringstream content;
             content << "error setting locale category " << category << " to " << locale;
-            config.log_warning(std::move(content).str());
+            config.log_warn(std::move(content).str());
         }
     }
 
@@ -113,6 +113,15 @@ namespace
         RegisterTypes_osimExampleComponents();
         RegisterTypes_osimPlugin();  // from `ThirdPartyPlugins/`
     }
+
+    std::string_view label_for(LogLevel level)
+    {
+        switch (level) {
+        case LogLevel::info: return "INFO";
+        case LogLevel::warn: return "WARN";
+        default:             return "INFO";
+        }
+    }
 }
 
 void osim::init()
@@ -121,14 +130,9 @@ void osim::init()
     init(config);
 }
 
-void osim::InitConfiguration::impl_log_warning(std::string message)
+void osim::InitConfiguration::impl_log_message(std::string_view payload, LogLevel level)
 {
-    std::cerr << "INFO: " << message << std::endl;
-}
-
-void osim::InitConfiguration::impl_log_info(std::string message)
-{
-    std::cerr << "WARN: " << message << std::endl;
+    std::cerr << label_for(level) << ": " << payload << std::endl;
 }
 
 void osim::init(InitConfiguration& config)
