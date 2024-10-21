@@ -2,6 +2,10 @@
 
 > A minimalistic take on OpenSim.
 
+> **Warning**
+> This is a very very early alpha concept that's only really used internally by
+> [OpenSim Creator](https://www.opensimcreator.com/). Use at your own risk 💥.
+
 
 # 👓 Overview
 
