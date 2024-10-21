@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  windows2022msvc:
+    name: Windows 2022 (MSVC)
+    runs-on: windows-2022
+    steps:
+
+    - uses: actions/checkout@v4
+      with:
+        path: osim
+        submodules: 'recursive'
+
+    - name: run scripts/build_windows.bat
+      run: |
+        cd $env:GITHUB_WORKSPACE\osim
+        call scripts/build_windows.bat || exit /b
