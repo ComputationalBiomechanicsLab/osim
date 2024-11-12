@@ -26,3 +26,8 @@ out/
 
 # Visual Studio Code user directory
 .vscode/
+
+# artifacts from build scripts
+osim-build/
+osim-dependencies-build/
+install/
