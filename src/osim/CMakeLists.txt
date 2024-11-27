@@ -698,7 +698,7 @@ if(${OSIM_INSTALL_OPENSIM_HEADERS})
 
     # install OpenSim headers to `include/OpenSim` (same as `opensim-core`)
     set(OSIM_EXCLUDED_PATTERNS "/Test/" "/Tests/" "/Examples/" "/Moco/" "/Sandbox/" "C3DFileAdapter")
-    file(GLOB_RECURSE OSIM_GLOBBED_HEADERS "${OSIM_OPENSIM_BASEDIR}/OpenSim/**/*.h")
+    file(GLOB_RECURSE OSIM_GLOBBED_HEADERS "${OSIM_OPENSIM_BASEDIR}/OpenSim/*.h")
     foreach(var ${OSIM_GLOBBED_HEADERS})
         set(OSIM_EXCLUDE FALSE)
         foreach(pattern ${OSIM_EXCLUDED_PATTERNS})
