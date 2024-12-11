@@ -5,7 +5,8 @@ project(osim-dependencies)
 set(OSCDEPS_BUILD_ALWAYS OFF CACHE BOOL "set BUILD_ALWAYS on all dependency targets, useful when editing dependencies")
 set(OSIMDEPS_GET_OPENBLAS ON CACHE BOOL "enable getting + building OpenBLAS from source")
 set(OSIMDEPS_GET_SPDLOG ON CACHE BOOL "enable getting + building spdlog from source")
-set(OSIMDEPS_GET_CATCH2 ON CACHE BOOL "enable getting + building catch2 from source")
+set(OSIMDEPS_GET_PYBIND11 OFF CACHE BOOL "enable getting + building pybind11 from source")
+set(OSIMDEPS_GET_CATCH2 OFF CACHE BOOL "enable getting + building catch2 from source")
 
 include(ExternalProject)  # ExternalProject_Add
 include(GNUInstallDirs)  # CMAKE_INSTALL_LIBDIR
@@ -68,6 +69,17 @@ if(${OSIMDEPS_GET_SPDLOG})
             -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
             -DSPDLOG_BUILD_SHARED:BOOL=OFF
             -DCMAKE_CXX_FLAGS:STRING=${SPDLOG_CXX_FLAGS}
+    )
+endif()
+
+if(${OSIMDEPS_GET_PYBIND11})
+    ExternalProject_Add(pybind11
+        SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/pybind11
+        BUILD_ALWAYS ${OSCDEPS_BUILD_ALWAYS}
+        CMAKE_CACHE_ARGS
+            ${OSCDEPS_DEPENDENCY_CMAKE_ARGS}
+            -DPYBIND11_CMAKECONFIG_INSTALL_DIR:PATH=${CMAKE_INSTALL_PREFIX}/lib/cmake/pybind11
+            -DPYBIND11_TEST:BOOL=OFF
     )
 endif()
 

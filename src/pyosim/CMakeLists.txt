@@ -1,7 +1,7 @@
 include(FindPython3)
 
-find_package(Python3 COMPONENTS Development NumPy)
+find_package(Python 3.9 COMPONENTS Interpreter Development REQUIRED)
+find_package(pybind11 CONFIG REQUIRED)
+pybind11_add_module(pyosim pyosim.cpp)
 
-add_library(pyosim SHARED lib.cpp)
-target_link_libraries(lib PUBLIC osim Python3::Python)
 

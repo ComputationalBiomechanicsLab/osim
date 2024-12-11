@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.15)
 project(osim VERSION 0.0.1 LANGUAGES C CXX)
 
 set(OSIM_BUILD_BINDINGS          OFF CACHE BOOL "enable/disable building python bindings")
-set(OSIM_BUILD_APPS              ON  CACHE BOOL "enable/disable building runnable applications")
-set(OSIM_BUILD_TESTS             ON  CACHE BOOL "enable/disable building test suites")
+set(OSIM_BUILD_APPS              OFF CACHE BOOL "enable/disable building runnable applications")
+set(OSIM_BUILD_TESTS             OFF CACHE BOOL "enable/disable building test suites")
 
 add_subdirectory(src)
 
