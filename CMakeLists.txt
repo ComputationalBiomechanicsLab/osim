@@ -4,6 +4,7 @@ project(osim VERSION 0.0.1 LANGUAGES CXX)
 
 set(OSIM_BUILD_BINDINGS OFF CACHE BOOL "enable/disable building python bindings")
 set(OSIM_BUILD_TESTS    OFF CACHE BOOL "enable/disable building test suites")
+set(OSIM_BUILD_DOCS     OFF CACHE BOOL "enable/disable building user documentation")
 
 add_subdirectory(src)
 
@@ -20,4 +21,8 @@ if(${OSIM_BUILD_TESTS})
 
     enable_testing()
     add_subdirectory(tests)
+endif()
+
+if(${OSIM_BUILD_DOCS})
+    add_subdirectory(docs)
 endif()
