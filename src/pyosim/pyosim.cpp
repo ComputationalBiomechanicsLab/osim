@@ -9,4 +9,3 @@ PYBIND11_MODULE(pyosim, m) {
 
     m.def("add", &add, "A function that adds two numbers");
 }
-

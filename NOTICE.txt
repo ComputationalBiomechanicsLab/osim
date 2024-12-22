@@ -11,10 +11,18 @@ code fork (i.e. copied + pasted, then subsequently modified in-tree).
 Libraries
 =========
 
-This product uses software developed by third parties in an unmodified
-form. In all cases, the software has a permissive license.
+This product uses software developed by third parties. In all
+cases, the software has a permissive license.
 
 The following software libraries are used:
+
+
+catch2
+------
+
+- https://github.com/catchorg/Catch2.git
+- Licensed under Boost Software License 1.0
+- Copyright (c) ???-2024, likely Martin Hořeňovský (@horenmar on GitHub)
 
 
 OpenBLAS
@@ -33,13 +41,21 @@ opensim-core
 - Mixed copyright holders. Largest appearsto be: Copyright (c) 2005-2024 Stanford University
 
 
+pybind11
+--------
+
+- https://github.com/pybind/pybind11
+- Licensed under a BSD3-style license
+- Copyright (c) 2016, Wenzel Jakob <wenzel.jakob@epfl.ch>
+
+
 simbody
 -------
 
 - https://github.com/simbody/simbody
 - Licensed under the Apache 2.0 license
 - Mixed copyright holders. Most are something like: "Copyright (c) 2007 Stanford University and
-  the authors", with Michael Sherman as the primary author (by far)
+  the authors", with Michael Sherman as the primary author
 
 
 spdlog
@@ -70,4 +86,3 @@ jam-plugin
 - The source code for some OpenSim components hosted in that repository were copied+pasted
   into the `ThirdPartyPlugins` directory of this product and modified in order to be compatible
   with this product's build requirements.
-

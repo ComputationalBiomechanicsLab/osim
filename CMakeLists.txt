@@ -1,16 +1,11 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(osim VERSION 0.0.1 LANGUAGES C CXX)
+project(osim VERSION 0.0.1 LANGUAGES CXX)
 
-set(OSIM_BUILD_BINDINGS          OFF CACHE BOOL "enable/disable building python bindings")
-set(OSIM_BUILD_APPS              OFF CACHE BOOL "enable/disable building runnable applications")
-set(OSIM_BUILD_TESTS             OFF CACHE BOOL "enable/disable building test suites")
+set(OSIM_BUILD_BINDINGS OFF CACHE BOOL "enable/disable building python bindings")
+set(OSIM_BUILD_TESTS    OFF CACHE BOOL "enable/disable building test suites")
 
 add_subdirectory(src)
-
-if(${OSIM_BUILD_APPS})
-    add_subdirectory(apps)
-endif()
 
 if(${OSIM_BUILD_TESTS})
     # enable testing in this top-level project, so that `ctest` works when
