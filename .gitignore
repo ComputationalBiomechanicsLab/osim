@@ -18,6 +18,7 @@
 
 # QtCreator
 *.autosave
+CMakeLists.txt.user
 
 # Visual Studio
 .vs/
@@ -31,3 +32,6 @@ out/
 osim-build/
 osim-dependencies-build/
 install/
+
+# python
+**/__pycache__/
